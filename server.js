@@ -8,6 +8,10 @@ const PORT = process.env.PORT || 10000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Backend is running successfully!');
+});
+
 // Sample GET endpoint
 app.get('/bfhl', (req, res) => {
     res.status(200).json({ operation_code: 1 });
